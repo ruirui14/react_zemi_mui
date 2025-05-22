@@ -1,20 +1,17 @@
 
 import './App.css'
-import { Button } from '@mui/material' 
+//import { Button } from '@mui/material' 
+import { Button } from "antd";
 import styled from '@emotion/styled';
 import SendIcon from '@mui/icons-material/Send';
 import React, { useState } from 'react'
 
 function App() {
  
-  // const TextButton = styled(Button)`
-  //   text-transform: none;
-  // `;
-
-  const [loading, setLoading] = useState(true);
-  function handleClick() {
-    setLoading(true);
-  }
+  // これは変なボタンのやつ　const [loading, setLoading] = useState(true);
+  // function handleClick() {
+  //   setLoading(true);
+  // }
 
 
   return (
@@ -25,7 +22,8 @@ function App() {
     <Button variant="contained">contained </Button>
     <Button variant="outlined">outlined </Button> */}
 
-    <Button
+    {/*MUIのボタン*/}
+    {/* これは変なボタン<Button
       onClick={handleClick}
       endIcon={<SendIcon />}
       loading={loading}
@@ -33,7 +31,10 @@ function App() {
       variant="contained"
     >
       Send
-    </Button>
+    </Button> */}
+
+    {/*AntDのボタン*/}
+    <Button type="primary">Primary Button</Button>
     </>
     
   )
