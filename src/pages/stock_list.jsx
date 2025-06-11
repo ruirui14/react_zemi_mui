@@ -16,6 +16,9 @@ import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import CssBaseline from "@mui/material/CssBaseline";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
 
 export default function StockList() {
 
@@ -33,11 +36,12 @@ export default function StockList() {
                 {/*indexが偶数ならInboxIcon、奇数ならMailIconを表示(交互に表示してる)*/}
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
               </ListItemIcon>
+              {/*ListItemTextはアイコンの右に表示されるテキスト*/}
               <ListItemText primary={text} />
             </ListItemButton>
           </ListItem>
         ))}
-        <Divider />
+        <Divider />     {/*リストのセクションをわけるために線が入る*/}
         {["All mail", "Trash", "Spam"].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
