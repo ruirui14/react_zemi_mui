@@ -5,7 +5,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 
 const SimpleDialog = ({ open, onClose, children }) => (
   <Dialog onClose={onClose} open={open}>
-    <DialogTitle>ダイアログタイトル</DialogTitle>
+    <DialogTitle>新規登録</DialogTitle>
     {children}
   </Dialog>
 );

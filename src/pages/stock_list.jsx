@@ -26,6 +26,10 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
+import StorageIcon from "@mui/icons-material/Storage";
+import NoteAdd from "@mui/icons-material/NoteAdd";
+import History from "@mui/icons-material/History";
+import Settings from "@mui/icons-material/Settings";
 
 // MUI チャート
 import { LineChart } from "@mui/x-charts/LineChart";
@@ -109,7 +113,7 @@ export default function StockList() {
               p: 3,
               minHeight: "calc(100vh - 64px)",
               alignContent: "flex-start",
-              marginTop: "20px"
+              marginTop: "20px",
             }}
           >
             <Button onClick={gotoStockTable} sx={{ width: "30%" }}>
@@ -118,6 +122,24 @@ export default function StockList() {
                   <Typography sx={{ fontSize: 20, color: "text.secondary" }}>
                     在庫一覧
                   </Typography>
+
+                  <div
+                    style={{
+                      height: "100%",
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      textAlign: "center",
+                      marginTop: "35px",
+                      gap: "8px",
+                    }}
+                  >
+                    <StorageIcon style={{ fontSize: 90, color: "#8c8c8c" }} />
+                    <p style={{ fontSize: 16, margin: 0, marginTop: "15px" }}>
+                      商品の在庫状況をチェック
+                    </p>
+                  </div>
                 </CardContent>
               </Card>
             </Button>
@@ -128,6 +150,23 @@ export default function StockList() {
                   <Typography sx={{ fontSize: 20, color: "text.secondary" }}>
                     在庫登録
                   </Typography>
+                  <div
+                    style={{
+                      height: "100%",
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      textAlign: "center",
+                      marginTop: "35px",
+                      gap: "8px",
+                    }}
+                  >
+                    <NoteAdd style={{ fontSize: 90, color: "#8c8c8c" }} />
+                    <p style={{ fontSize: 16, margin: 0, marginTop: "15px" }}>
+                      新しい商品の在庫情報を入力・登録
+                    </p>
+                  </div>
                 </CardContent>
               </Card>
             </Button>
@@ -138,12 +177,36 @@ export default function StockList() {
                   <Typography sx={{ fontSize: 20, color: "text.secondary" }}>
                     在庫変更履歴
                   </Typography>
+                  <div
+                    style={{
+                      height: "100%",
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      textAlign: "center",
+                      marginTop: "35px",
+                      gap: "8px",
+                    }}
+                  >
+                    <History style={{ fontSize: 90, color: "#8c8c8c" }} />
+                    <p style={{ fontSize: 16, margin: 0, marginTop: "15px" }}>
+                      在庫・ステータスの変更履歴を確認
+                    </p>
+                  </div>
                 </CardContent>
               </Card>
             </Button>
 
             {/*チャート*/}
-            <Card sx={{ width: "60.5%", height: 280, borderRadius: 2, marginLeft: "10px" }}>
+            <Card
+              sx={{
+                width: "60.5%",
+                height: 280,
+                borderRadius: 2,
+                marginLeft: "10px",
+              }}
+            >
               <CardContent>
                 <Typography
                   sx={{
@@ -163,12 +226,31 @@ export default function StockList() {
               </CardContent>
             </Card>
 
-            <Button sx={{ width: "30%", marginLeft: "10px", marginTop: "-5px" }}>
+            <Button
+              sx={{ width: "30%", marginLeft: "10px", marginTop: "-5px" }}
+            >
               <Card sx={{ width: "100%", height: 280, borderRadius: 2 }}>
                 <CardContent>
                   <Typography sx={{ fontSize: 20, color: "text.secondary" }}>
                     アカウント設定
                   </Typography>
+                  <div
+                    style={{
+                      height: "100%",
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      textAlign: "center",
+                      marginTop: "35px",
+                      gap: "8px",
+                    }}
+                  >
+                    <Settings style={{ fontSize: 90, color: "#8c8c8c" }} />
+                    <p style={{ fontSize: 16, margin: 0, marginTop: "15px" }}>
+                      アカウント設定
+                    </p>
+                  </div>
                 </CardContent>
               </Card>
             </Button>
