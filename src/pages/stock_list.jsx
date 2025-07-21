@@ -20,8 +20,15 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import { LineChart } from "@mui/x-charts/LineChart";
+import { useNavigate } from "react-router-dom";
+
 
 export default function StockList() {
+  const navigate = useNavigate();
+
+  const gotoStockTable = () => {
+      navigate("/stock_table");
+  }
   const drawerWidth = 240;
   const DrawerList = (
     //リスト全体の親要素(ここに複数のリストアイテムが入る)
@@ -94,7 +101,7 @@ export default function StockList() {
             backgroundColor: "#EEF2F6",
           }}
         >
-          <Button sx={{ height: "280px", width: "30%" }}>
+          <Button onClick={gotoStockTable} sx={{ height: "280px", width: "30%" }}>
             <Card sx={{ height: "280px", width: "100%", borderRadius: "12px" }}>
               <CardContent>
                 <Typography
@@ -177,7 +184,7 @@ export default function StockList() {
                   gutterBottom
                   sx={{ color: "text.secondary", fontSize: 30 }}
                 >
-                  ここどうしよう
+                  写真置く
                 </Typography>
               </CardContent>
             </Card>
